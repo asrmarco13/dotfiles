@@ -1,7 +1,11 @@
 {{ if eq .chezmoi.osRelease.id "ubuntu" -}}
 #!/bin/sh
-sudo apt install git
+sudo apt install git vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
 {{ else if eq .chezmoi.osRelease.id "arch" -}}
 #!/bin/bash
-sudo pacman -S git
+sudo pacman -S git vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
 {{ end -}}
