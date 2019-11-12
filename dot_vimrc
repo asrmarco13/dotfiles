@@ -1,0 +1,113 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/syntastic'
+Plugin 'valloric/youcompleteme'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'grep.vim'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'klen/python-mode'
+Plugin 'chase/vim-ansible-yaml'
+Plugin 'tpope/vim-surround'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'ekalinin/dockerfile.vim'
+Plugin 'elzr/vim-json'
+Plugin 'hashivim/vim-terraform'
+Plugin 'juliosueiras/vim-terraform-completion'
+Plugin 'vim-airline/vim-airline'
+Plugin 'tpope/vim-abolish'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+autocmd vimenter * NERDTree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+syntax enable
+
+" Vim Solarized
+set background=dark
+
+" colorscheme solarized
+let g:solarized_termcolors=256
+set mouse=a
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_python_checkers = ['pylint', 'flake8', 'python']
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
+
+" Enable python 3 syntax checking
+" let g:pymode_python = 'python3'
+let g:pymode_options_colorcolumn = 0
+let g:pymode_indent = 1
+let g:pymode_doc = 1
+
+" Markdown enable concealing
+set conceallevel=2
+
+" Terraform
+" Allow vim-terraform to align settings automatically with Tabularize
+let g:terraform_align=1
+" Allow vim-terraform to automatically format *.tf and *.tfvars files 
+"with terraform fmt. You can also do this manually with the :TerraformFmt command.
+let g:terraform_fmt_on_save=1
+
+" Wrap git commit message
+au FileType gitcommit setlocal tw=72
