@@ -1,0 +1,4 @@
+README.md
+{{- if ne .chezmoi.hostname "IAD177" }}
+.work # only manage .work on IAD177
+{{- end }}
