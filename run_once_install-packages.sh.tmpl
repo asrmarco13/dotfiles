@@ -1,11 +1,13 @@
 {{ if eq .chezmoi.osRelease.id "ubuntu" -}}
 #!/bin/sh
-sudo apt install git vim
+sudo apt install git vim build-essential cmake python3-dev
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
+cd ~/.vim/bundle/YouCompleteMe
+./install.py
 {{ else if eq .chezmoi.osRelease.id "arch" -}}
 #!/bin/bash
-sudo pacman -S git vim
+sudo pacman -S git vim build-essential cmake python3-dev
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 {{ end -}}
