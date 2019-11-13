@@ -1,5 +1,14 @@
 # Marco Orfei VIM Dotfiles
 
+## **Indice**
+1. [Introduzione](#introduzione)
+2. [Cosa è VIM](#cosa-è-vim)
+3. [Lista plugin](#lista-plugin)
+4. [Automatizzare la creazione e gestione dei dotfiles](#automatizzare-la-creazione-e-la-gestione-dei-dotfiles)
+5. [Configurare VIM](#configurare-vim)
+6. [FAQ](#faq)
+7. [Conclusione](#conclusione)
+
 ### Introduzione
 
 I dotfiles sono usati per personalizzare il nostro sistema operativo, in pratica essi contengono i setup preferiti del nostro computer o dei nostri applicativi che possiamo utilizzare più volte su una o più macchine diverse. Il nome deriva dai file di configurazione nei sistemi Unix-like che iniziano con un punto (es. il file di configurazione di git chiamato " **.gitconfig** "). Questo repository configura VIM con tutti i plugin usati da me in ambiente Ubuntu Desktop, Server e Arch Linux.
