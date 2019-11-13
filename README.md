@@ -1,4 +1,4 @@
-# Marco Orfei VIM Dotfiles
+# VIM Dotfiles
 
 ## **Indice**
 1. [Introduzione](#introduzione)
