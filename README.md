@@ -33,7 +33,6 @@ Di seguito la lista dei plugin da me usati che vanno dalla possibilità di esplo
 - [grep.vim](https://vimawesome.com/plugin/grep-vim)
 - [davidhalter/jedi-vim](https://vimawesome.com/plugin/jedi-vim)
 - [klen/python-mode](https://github.com/python-mode/python-mode)
-- [chase/vim-ansible-yaml](https://vimawesome.com/plugin/vim-ansible-yaml)
 - [tpope/vim-surround](https://github.com/tpope/vim-surround.git)
 - [godlygeek/tabular](https://github.com/godlygeek/tabular.git)
 - [plasticboy/vim-markdown](https://github.com/plasticboy/vim-markdown.git)
@@ -43,6 +42,7 @@ Di seguito la lista dei plugin da me usati che vanno dalla possibilità di esplo
 - [juliosueiras/vim-terraform-completion](https://github.com/juliosueiras/vim-terraform-completion.git)
 - [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline.git)
 - [tpope/vim-abolish](https://github.com/tpope/vim-abolish.git)
+- [pearofducks/ansible-vim](https://github.com/pearofducks/ansible-vim)
 
 ### Automatizzare la creazione e gestione dei dotfiles
 
