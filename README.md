@@ -6,7 +6,7 @@
 3. [Lista plugin](#lista-plugin)
 4. [Automatizzare la creazione e gestione dei dotfiles](#automatizzare-la-creazione-e-la-gestione-dei-dotfiles)
 5. [Configurare VIM](#configurare-vim)
-6. [Cosa è ZSH](cosa-è-zsh)
+6. [Cosa è ZSH](#cosa-è-zsh)
 7. [FAQ](#faq)
 8. [Conclusione](#conclusione)
 
