@@ -1,13 +1,25 @@
 {{ if eq .chezmoi.osRelease.id "ubuntu" -}}
 #!/bin/sh
-sudo apt install git vim build-essential cmake python3-dev
+sudo apt install git vim build-essential cmake python3-dev zsh
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 cd ~/.vim/bundle/youcompleteme
 python3 install.py
+if hash zsh > /dev/null 2>&1 ; then
+        sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+else
+        echo "zsh command not found"
+fi
 {{ else if eq .chezmoi.osRelease.id "arch" -}}
 #!/bin/bash
-sudo pacman -S git vim build-essential cmake python3-dev
+sudo pacman -S git vim build-essential cmake python3-dev zsh zsh-completions curl
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
+cd ~/.vim/bundle/youcompleteme
+python3 install.py
+if hash zsh > /dev/null 2>&1 ; then
+        sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+else
+        echo "zsh command not found"
+fi
 {{ end -}}
