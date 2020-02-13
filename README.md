@@ -1,4 +1,4 @@
-# VIM Dotfiles
+# Dotfiles
 
 ## **Indice**
 1. [Introduzione](#introduzione)
@@ -6,12 +6,13 @@
 3. [Lista plugin](#lista-plugin)
 4. [Automatizzare la creazione e gestione dei dotfiles](#automatizzare-la-creazione-e-la-gestione-dei-dotfiles)
 5. [Configurare VIM](#configurare-vim)
-6. [FAQ](#faq)
-7. [Conclusione](#conclusione)
+6. [Cosa è ZSH](cosa-è-zsh)
+7. [FAQ](#faq)
+8. [Conclusione](#conclusione)
 
 ### Introduzione
 
-I dotfiles sono usati per personalizzare il nostro sistema operativo, in pratica essi contengono i setup preferiti del nostro computer o dei nostri applicativi che possiamo utilizzare più volte su una o più macchine diverse. Il nome deriva dai file di configurazione nei sistemi Unix-like che iniziano con un punto (es. il file di configurazione di git chiamato " **.gitconfig** "). Questo repository configura VIM con tutti i plugin usati da me in ambiente Ubuntu Desktop, Server e Arch Linux.
+I dotfiles sono usati per personalizzare il nostro sistema operativo, in pratica essi contengono i setup preferiti del nostro computer o dei nostri applicativi che possiamo utilizzare più volte su una o più macchine diverse. Il nome deriva dai file di configurazione nei sistemi Unix-like che iniziano con un punto (es. il file di configurazione di git chiamato " **.gitconfig** "). Questo repository configura VIM e ZSH con tutti i plugin usati da me in ambiente Ubuntu Desktop, Server e Arch Linux.
 
 ### Cosa è VIM
 
@@ -83,6 +84,24 @@ Inizializzare il repository:
 Applicare le configurazioni:
 
 `chezmoi apply`
+
+### Cosa è ZSH
+
+**ZSH** è una shell che può essere utilizzata come linea di comando interattiva e come un potente interprete per script di shell.
+
+Zsh può essere vista come un'estensione della Bourne shell dotata di numerose migliorie, fra le quali alcune caratteristiche mutuate da **bash**, **ksh** e **Tcsh**.
+
+Funzionalità:
+- Autocompletamento programmabile che aiuta l'utente ad inserire sia le opzioni che gli argomenti per la maggior parte dei comandi più utilizzati, con supporto pre-attivato per svariate centinaia di comandi
+- Condivisione della cronologia dei comandi fra tutte le shell attive
+- Funzionalità estesa di globbing che consente di specificare i nomi file senza la necessità di utilizzare un programma esterno quale find
+- Manipolazione avanzata di variabili/array
+- Modifica di comandi multi-linea in un singolo buffer
+- Controllo ortografico
+- Varie modalità di compatibilità, ad esempio zsh può emulare il comportamento di una Bourne shell quando eseguita come /bin/sh
+- Temi per i prompt, compresa l'abilità di posizionare parti del prompt sul lato destro dello schermo e di nasconderle automaticamente quando si sta inserendo un comando lungo
+- Moduli caricabili, che provvedono, fra le altre cose, a fornire: interfaccia TCP completa, controlli per Socket di dominio locale, un client FTP e funzionalità matematiche estese
+- Completamente personalizzabile
 
 ### FAQ
 
