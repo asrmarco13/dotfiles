@@ -29,6 +29,7 @@ Plugin 'juliosueiras/vim-terraform-completion'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-abolish'
 Plugin 'pearofducks/ansible-vim'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
