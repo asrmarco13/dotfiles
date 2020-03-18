@@ -30,6 +30,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-abolish'
 Plugin 'pearofducks/ansible-vim'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'ryanoasis/vim-devicons'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -55,11 +56,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Map a specific key or shortcut to open NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
-syntax enable
-
 " Vim Solarized
-set background=dark
-
+syntax enable
+" set background=dark
 " colorscheme solarized
 let g:solarized_termcolors=256
 set mouse=a
@@ -119,6 +118,9 @@ let g:terraform_align=1
 " Allow vim-terraform to automatically format *.tf and *.tfvars files 
 "with terraform fmt. You can also do this manually with the :TerraformFmt command.
 let g:terraform_fmt_on_save=1
+
+" VIM devicons
+set encoding=UTF-8
 
 " Wrap git commit message
 au FileType gitcommit setlocal tw=72

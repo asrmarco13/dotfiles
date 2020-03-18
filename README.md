@@ -25,9 +25,9 @@ Di seguito la lista dei plugin da me usati che vanno dalla possibilità di esplo
 
 - [VundleVim/Vundle.vim](https://github.com/VundleVim/Vundle.vim)
 - [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive.git)
-- [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree.git)
-- [scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter.git)
-- [scrooloose/syntastic](https://github.com/vim-syntastic/syntastic.git)
+- [preservim/nerdtree](https://github.com/preservim/nerdtree)
+- [preservim/nerdcommenter](https://github.com/preservim/nerdcommenter)
+- [vim-syntastic/syntastic](https://github.com/vim-syntastic/syntastic)
 - [valloric/youcompleteme](https://vimawesome.com/plugin/youcompleteme)
 - [altercation/vim-colors-solarized]()
 - [grep.vim](https://vimawesome.com/plugin/grep-vim)
@@ -43,6 +43,8 @@ Di seguito la lista dei plugin da me usati che vanno dalla possibilità di esplo
 - [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline.git)
 - [tpope/vim-abolish](https://github.com/tpope/vim-abolish.git)
 - [pearofducks/ansible-vim](https://github.com/pearofducks/ansible-vim)
+- [Xuyuanp/nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)
+- [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons)
 
 ### Automatizzare la creazione e gestione dei dotfiles
 
