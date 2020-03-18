@@ -7,6 +7,7 @@ cd ~/.vim/bundle/youcompleteme
 python3 install.py
 if hash zsh > /dev/null 2>&1 ; then
         sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 else
         echo "zsh command not found"
 fi
@@ -19,6 +20,7 @@ cd ~/.vim/bundle/youcompleteme
 python3 install.py
 if hash zsh > /dev/null 2>&1 ; then
         sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 else
         echo "zsh command not found"
 fi
