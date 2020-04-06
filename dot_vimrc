@@ -16,7 +16,6 @@ Plugin 'preservim/nerdcommenter'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'valloric/youcompleteme'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'davidhalter/jedi-vim'
 Plugin 'python-mode/python-mode'
 Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/tabular'
@@ -110,6 +109,9 @@ set conceallevel=2
 
 " VIM devicons
 set encoding=UTF-8
+
+" Black
+let g:black_fast = 0
 
 " Wrap git commit message
 au FileType gitcommit setlocal tw=72
