@@ -47,7 +47,6 @@ Di seguito la lista dei plugin da me usati che vanno dalla possibilità di esplo
 - [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline.git)
 - [Xuyuanp/nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)
 - [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons)
-- [psf/black](https://github.com/psf/black)
 
 ### Automatizzare la creazione e gestione dei dotfiles
 

@@ -25,7 +25,6 @@ Plugin 'elzr/vim-json'
 Plugin 'vim-airline/vim-airline'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ryanoasis/vim-devicons'
-Plugin 'psf/black'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -109,9 +108,6 @@ set conceallevel=2
 
 " VIM devicons
 set encoding=UTF-8
-
-" Black
-let g:black_fast = 0
 
 " Wrap git commit message
 au FileType gitcommit setlocal tw=72
