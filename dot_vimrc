@@ -16,7 +16,7 @@ Plugin 'preservim/nerdcommenter'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'valloric/youcompleteme'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'python-mode/python-mode'
+Plugin 'davidhalter/jedi-vim'
 Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
@@ -97,17 +97,18 @@ let g:NERDToggleCheckAllLines = 1
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
 
-" Enable python 3 syntax checking
-" let g:pymode_python = 'python3'
-let g:pymode_options_colorcolumn = 0
-let g:pymode_indent = 1
-let g:pymode_doc = 1
-
 " Markdown enable concealing
-set conceallevel=2
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_conceal = 2
 
 " VIM devicons
 set encoding=UTF-8
 
 " Wrap git commit message
 au FileType gitcommit setlocal tw=72
+
+" Set line number for py file
+autocmd FileType python set number
+
+" Set Jedi VIM to use when going to a definition
+let g:jedi#use_tabs_not_buffers = 1
