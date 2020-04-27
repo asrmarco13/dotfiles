@@ -24,7 +24,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
 # DISABLE_UPDATE_PROMPT="true"
@@ -68,7 +68,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker encode64 history pip python systemd archlinux httpie heroku command-not-found gitignore ssh-agent)
+plugins=(git docker encode64 history pip python systemd archlinux httpie heroku command-not-found gitignore ssh-agent pipenv ruby)
 
 # To enable agent forwarding support add the following to your zshrc file
 # zstyle :omz:plugins:ssh-agent identities id_rsa id_rsa2 id_github
