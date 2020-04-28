@@ -1,4 +1,9 @@
-README.md
-{{- if ne .chezmoi.hostname "IAD177" }}
-.work # only manage .work on IAD177
-{{- end }}
+{{ if ne .chezmoi.osRelease.id "ubuntu" }}
+install_vim_ubuntu.sh
+install_oh_my_zsh_ubuntu.sh
+install_powerlevel10k_ubuntu.sh
+{{ else if ne .chezmoi.osRelease.id "arch" }}
+install_vim_arch.sh
+install_oh_my_zsh_arch.sh
+install_powerlevel10k_arch.sh
+{{ end -}}

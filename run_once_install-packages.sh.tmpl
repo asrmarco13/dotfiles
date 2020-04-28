@@ -1,5 +1,20 @@
 {{ if eq .chezmoi.osRelease.id "ubuntu" -}}
-run_on_ubuntu.sh
+#!/bin/sh
+set -e
+sudo apt install git vim build-essential cmake python3-dev zsh fonts-powerline || true
+git clone --depth=1 https://github.com/ryanoasis/nerd-fonts.git
+cd nerd-fonts && ./install.sh Meslo 
 {{ else if eq .chezmoi.osRelease.id "arch" -}}
-run_on_arch.sh
+#!/bin/bash
+set -e
+sudo pacman -S git vim build-essential cmake python3-dev zsh zsh-completions curl || true
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+cd ~
+if hash yay > /dev/null 2>&1 ; then
+        yay -S nerd-fonts-meslo 
+else
+        echo "yay command not found"
+fi
 {{ end -}}
