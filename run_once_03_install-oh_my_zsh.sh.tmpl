@@ -1,3 +1,4 @@
+{{ if eq .chezmoi.os "linux" -}}
 #!/bin/sh
 set -e
 if hash zsh > /dev/null 2>&1 ; then
@@ -6,3 +7,4 @@ if hash zsh > /dev/null 2>&1 ; then
 else
         echo "zsh command not found"
 fi
+{{ end -}}

@@ -4,6 +4,7 @@ set -e
 sudo apt install git vim build-essential cmake python3-dev zsh fonts-powerline || true
 git clone --depth=1 https://github.com/ryanoasis/nerd-fonts.git
 cd nerd-fonts && ./install.sh Meslo 
+cd ~ && sudo fc-cache -f -v
 {{ else if eq .chezmoi.osRelease.id "arch" -}}
 #!/bin/bash
 set -e
