@@ -104,7 +104,7 @@ Per Arch Linux:
 
 `pacman -S chezmoi`
 
-Creare le directory chezmoi sotto .local/share. Se non esiste nulla creare tutte le cartelle necessarie:
+Creare la directory chezmoi sotto .local/share. Se non esiste nulla creare tutte le cartelle necessarie:
 
 `mkdir -p ~/.local/share/chezmoi`
 
