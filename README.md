@@ -1,10 +1,18 @@
 # Dotfiles
 
+<p align="center">
+  <a href="https://github.com/asrmarco13/dotfiles/blob/master/LICENSE"><img alt="License: GPL3" src="https://img.shields.io/github/license/asrmarco13/dotfiles"></a>
+  <a href="https://github.com/asrmarco13/dotfiles"><img alt="Latest commit" src="https://img.shields.io/github/last-commit/asrmarco13/dotfiles/master"></a>
+  <a href="https://github.com/asrmarco13/dotfiles/issues"><img alt="Open Issues" src="https://img.shields.io/github/issues/asrmarco13/dotfiles"></a>
+  <a href="https://github.com/asrmarco13/dotfiles"><img alt="Stars" src="https://img.shields.io/github/stars/asrmarco13/dotfiles?style=social"></a>
+  <a href="https://github.com/asrmarco13/dotfiles"><img alt="Watchers" src="https://img.shields.io/github/watchers/asrmarco13/dotfiles?style=social"></a>
+<p>
+
 ## **Indice**
 1. [Introduzione](#introduzione)
 2. [Cosa è VIM](#cosa-è-vim)
 3. [Lista plugin](#lista-plugin)
-4. [Automatizzare la creazione e gestione dei dotfiles](#automatizzare-la-creazione-e-la-gestione-dei-dotfiles)
+4. [Automatizzare la creazione e gestione dei dotfiles](#automatizzare-la-creazione-e-gestione-dei-dotfiles)
 5. [Configurare VIM](#configurare-vim)
 6. [Cosa è ZSH](#cosa-è-zsh)
 7. [FAQ](#faq)
@@ -26,24 +34,20 @@ Di seguito la lista dei plugin da me usati che vanno dalla possibilità di esplo
 
 - [VundleVim/Vundle.vim](https://github.com/VundleVim/Vundle.vim)
 - [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive.git)
-- [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree.git)
-- [scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter.git)
-- [scrooloose/syntastic](https://github.com/vim-syntastic/syntastic.git)
+- [preservim/nerdtree](https://github.com/preservim/nerdtree)
+- [preservim/nerdcommenter](https://github.com/preservim/nerdcommenter)
+- [vim-syntastic/syntastic](https://github.com/vim-syntastic/syntastic)
 - [valloric/youcompleteme](https://vimawesome.com/plugin/youcompleteme)
-- [altercation/vim-colors-solarized]()
-- [grep.vim](https://vimawesome.com/plugin/grep-vim)
-- [davidhalter/jedi-vim](https://vimawesome.com/plugin/jedi-vim)
-- [klen/python-mode](https://github.com/python-mode/python-mode)
+- [altercation/vim-colors-solarized](https://github.com/altercation/vim-colors-solarized)
+- [davidhalter/jedi-vim](https://github.com/davidhalter/jedi-vim)
 - [tpope/vim-surround](https://github.com/tpope/vim-surround.git)
 - [godlygeek/tabular](https://github.com/godlygeek/tabular.git)
 - [plasticboy/vim-markdown](https://github.com/plasticboy/vim-markdown.git)
 - [ekalinin/dockerfile.vim](https://github.com/ekalinin/Dockerfile.vim.git)
 - [elzr/vim-json](https://github.com/elzr/vim-json.git)
-- [hashivim/vim-terraform](https://github.com/hashivim/vim-terraform.git)
-- [juliosueiras/vim-terraform-completion](https://github.com/juliosueiras/vim-terraform-completion.git)
 - [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline.git)
-- [tpope/vim-abolish](https://github.com/tpope/vim-abolish.git)
-- [pearofducks/ansible-vim](https://github.com/pearofducks/ansible-vim)
+- [Xuyuanp/nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)
+- [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons)
 
 ### Automatizzare la creazione e gestione dei dotfiles
 
@@ -63,11 +67,7 @@ Per Arch Linux:
 
 Creare le directory chezmoi sotto .local/share. Se non esiste nulla creare tutte le cartelle necessarie:
 
-`mkdir ~/.local`
-
-`mkdir ~/.local/share`
-
-`mkdir ~/.local/share/chezmoi`
+`mkdir -p ~/.local/share/chezmoi`
 
 Clonare il repository:
 
