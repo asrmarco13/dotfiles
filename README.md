@@ -141,6 +141,7 @@ Configurare **powelevel10k**:
 **Dove posso trovare altri plugin da installare per la mia configurazione?**
 
 [VIM Awesome](https://vimawesome.com/)
+
 [Oh-my-zsh plugins](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins)
 
 **Idee, problemi o bug?**
