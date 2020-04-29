@@ -110,7 +110,7 @@ Creare la directory chezmoi sotto .local/share. Se non esiste nulla creare tutte
 
 Clonare il repository:
 
-`git clone https://github.com/asrmarco13/dotfiles ~/.local/share/chezmoi`
+`git clone --depth=1 https://github.com/asrmarco13/dotfiles ~/.local/share/chezmoi`
 
 Andare all'interno del repository:
 
