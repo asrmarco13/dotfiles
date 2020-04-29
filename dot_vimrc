@@ -11,20 +11,25 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'preservim/nerdtree'
-Plugin 'preservim/nerdcommenter'
-Plugin 'vim-syntastic/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/syntastic'
 Plugin 'valloric/youcompleteme'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'grep.vim'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'klen/python-mode'
 Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'ekalinin/dockerfile.vim'
 Plugin 'elzr/vim-json'
+Plugin 'hashivim/vim-terraform'
+Plugin 'juliosueiras/vim-terraform-completion'
 Plugin 'vim-airline/vim-airline'
+Plugin 'tpope/vim-abolish'
+Plugin 'pearofducks/ansible-vim'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'ryanoasis/vim-devicons'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -41,35 +46,30 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-" NerdTree
 autocmd vimenter * NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" Map a specific key or shortcut to open NERDTree
-map <C-n> :NERDTreeToggle<CR>
+
+syntax enable
 
 " Vim Solarized
-syntax enable
-" set background=dark
+set background=dark
+
 " colorscheme solarized
 let g:solarized_termcolors=256
 set mouse=a
-
-" Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-" let g:syntastic_python_checkers = ['pylint', 'flake8', 'python']
-let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_python_checkers = ['pylint', 'flake8', 'python']
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" Nerdcommenter
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
 
@@ -80,7 +80,7 @@ let g:NERDCompactSexyComs = 1
 let g:NERDDefaultAlign = 'left'
 
 " Set a language to use its alternate delimiters by default
-let g:NERDAltDelims_python = 1
+let g:NERDAltDelims_java = 1
 
 " Add your own custom formats or override the defaults
 let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
@@ -91,24 +91,24 @@ let g:NERDCommentEmptyLines = 1
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
 
-" Enable NERDCommenterToggle to check all selected lines is commented or not
-let g:NERDToggleCheckAllLines = 1
-
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
 
-" Markdown enable concealing
-let g:vim_markdown_folding_disabled = 1
-let g:vim_markdown_conceal = 2
+" Enable python 3 syntax checking
+" let g:pymode_python = 'python3'
+let g:pymode_options_colorcolumn = 0
+let g:pymode_indent = 1
+let g:pymode_doc = 1
 
-" VIM devicons
-set encoding=UTF-8
+" Markdown enable concealing
+set conceallevel=2
+
+" Terraform
+" Allow vim-terraform to align settings automatically with Tabularize
+let g:terraform_align=1
+" Allow vim-terraform to automatically format *.tf and *.tfvars files 
+"with terraform fmt. You can also do this manually with the :TerraformFmt command.
+let g:terraform_fmt_on_save=1
 
 " Wrap git commit message
 au FileType gitcommit setlocal tw=72
-
-" Set line number for py file
-autocmd FileType python set number
-
-" Set Jedi VIM to use when going to a definition
-let g:jedi#use_tabs_not_buffers = 1
