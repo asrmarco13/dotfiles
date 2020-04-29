@@ -5,7 +5,7 @@ sudo apt install git vim build-essential cmake python3-dev zsh fonts-powerline |
 git clone --depth=1 https://github.com/ryanoasis/nerd-fonts.git
 cd nerd-fonts && ./install.sh Meslo 
 cd ~ && sudo fc-cache -f -v
-{{ else if eq .chezmoi.osRelease.id "arch" -}}
+{{ else if or (eq .chezmoi.osRelease.id "arch") (eq .chezmoi.osRelease.id "endeavouros") -}}
 #!/bin/bash
 set -e
 sudo pacman -S git vim cmake python zsh zsh-completions curl || true
