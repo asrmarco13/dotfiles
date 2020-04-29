@@ -124,7 +124,7 @@ Applicare le configurazioni:
 
 `chezmoi apply`
 
-Per far funzionare il plugin devicons di VIM e il tema powelevel10k verrà installato un font raccomandato chiamato [Meslo Nerd Fonts](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k). Termite quindi le configurazioni modificare il font del proprio terminale scegliendo il **MesloLGS Nerd Font**. Andare poi nella home directory:
+Per far funzionare il plugin devicons di VIM e il tema powelevel10k verrà installato un font raccomandato chiamato [Meslo Nerd Fonts](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k). Terminate quindi le configurazioni, modificare il font del proprio terminale scegliendo il **MesloLGS Nerd Font**. Andare poi nella home directory:
 
 `cd ~`
 
