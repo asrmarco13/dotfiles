@@ -90,43 +90,63 @@ Installare chezmoi.
 
 Per Ubuntu 16.04 LTS in poi:
 
-`snap install chezmoi --classic`
+```shell
+snap install chezmoi --classic
+```
 
 Per Arch Linux:
 
-`pacman -S chezmoi`
+```shell
+pacman -S chezmoi
+```
 
 Creare la directory chezmoi sotto .local/share. Se non esiste nulla creare tutte le cartelle necessarie:
 
-`mkdir -p ~/.local/share/chezmoi`
+```shell
+mkdir -p ~/.local/share/chezmoi
+```
 
 Clonare il repository:
 
-`git clone --depth=1 https://github.com/asrmarco13/dotfiles ~/.local/share/chezmoi`
+```shell
+git clone --depth=1 https://github.com/asrmarco13/dotfiles ~/.local/share/chezmoi
+```
 
 Andare all'interno del repository:
 
-`cd ~/.local/share/chezmoi`
+```shell
+cd ~/.local/share/chezmoi
+```
 
 Inizializzare il repository:
 
-`chezmoi init`
+```shell
+chezmoi init
+```
 
 Applicare le configurazioni:
 
-`chezmoi apply`
+```shell
+chezmoi apply
+```
 
 Per far funzionare il plugin devicons di VIM e il tema powelevel10k verrà installato un font raccomandato chiamato [Meslo Nerd Fonts](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k). Terminate quindi le configurazioni, modificare il font del proprio terminale scegliendo il **MesloLGS Nerd Font**. Andare poi nella home directory:
 
-`cd ~`
+```shell
+cd ~
+```
 
 Lanciare lo script di installazione del tema **powelevel10k**:
 
-`./.install_powerlevel10k.sh`
+```shell
+./.install_powerlevel10k.sh
+```
 
 Configurare **powelevel10k**:
 
-`source .zshrc`
+```shell
+source .zshrc
+```
 
 ### FAQ
 
