@@ -1,0 +1,11 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/bin/sh
+set -e
+if hash zsh > /dev/null 2>&1 ; then
+        cd ~ && mv ~/.zshrc ~/.zshrc.bck
+	sudo chmod +x .install_powerlevel10k.sh
+        sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+else
+        echo "zsh command not found"
+fi
+{{ end -}}

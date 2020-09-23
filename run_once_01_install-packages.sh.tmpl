@@ -1,0 +1,21 @@
+{{ if eq .chezmoi.osRelease.id "ubuntu" -}}
+#!/bin/sh
+set -e
+sudo apt install git vim build-essential cmake python3-dev python3-pip python3-venv python-setuptools pipenv zsh fonts-powerline || true
+git clone --depth=1 https://github.com/ryanoasis/nerd-fonts.git
+cd nerd-fonts && ./install.sh Meslo 
+cd ~ && sudo fc-cache -f -v
+{{ else if or (eq .chezmoi.osRelease.id "arch") (eq .chezmoi.osRelease.id "endeavouros") -}}
+#!/bin/bash
+set -e
+sudo pacman -S git vim cmake python python-pip python-setuptools python-virtualenv python-pipenv zsh zsh-completions curl || true
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+cd ~
+if hash yay > /dev/null 2>&1 ; then
+        yay -S nerd-fonts-meslo 
+else
+        echo "yay command not found"
+fi
+{{ end -}}

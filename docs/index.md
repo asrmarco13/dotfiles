@@ -1,13 +1,5 @@
 # Dotfiles
 
-<p align="center">
-  <a href="https://github.com/asrmarco13/dotfiles/blob/master/LICENSE"><img alt="License: GPL3" src="https://img.shields.io/github/license/asrmarco13/dotfiles"></a>
-  <a href="https://github.com/asrmarco13/dotfiles"><img alt="Latest commit" src="https://img.shields.io/github/last-commit/asrmarco13/dotfiles/master"></a>
-  <a href="https://github.com/asrmarco13/dotfiles/issues"><img alt="Open Issues" src="https://img.shields.io/github/issues/asrmarco13/dotfiles"></a>
-  <a href="https://github.com/asrmarco13/dotfiles"><img alt="Stars" src="https://img.shields.io/github/stars/asrmarco13/dotfiles?style=social"></a>
-  <a href="https://github.com/asrmarco13/dotfiles"><img alt="Watchers" src="https://img.shields.io/github/watchers/asrmarco13/dotfiles?style=social"></a>
-<p>
-
 ## **Indice**
 1. [Introduzione](#introduzione)
 2. [Cosa è VIM](#cosa-è-vim)
