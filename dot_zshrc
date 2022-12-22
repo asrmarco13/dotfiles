@@ -68,7 +68,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker encode64 history pip python systemd archlinux httpie heroku command-not-found gitignore ssh-agent pipenv ruby)
+plugins=(git docker encode64 history pip python systemd archlinux httpie heroku command-not-found gitignore ssh-agent pipenv ruby oh-my-matrix zsh-autosuggestions poetry sudo)
 
 # To enable agent forwarding support add the following to your zshrc file
 # zstyle :omz:plugins:ssh-agent identities id_rsa id_rsa2 id_github
